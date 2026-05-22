@@ -19,12 +19,18 @@ def agregar_lista(lista):
 
     lista.append([nombre, identidad, empresa, altura, peso, genero, color_ojos, color_pelo, fuerza, inteligencia])
 
-def eliminar_lista(lista):
-    borrar = input("Ingrese el nombre del heroe a borrar: ")
+def eliminar_lista(lista, mensaje, mensaje_error):
+    encontrado = False
+    borrar = input(mensaje)
     for i in range(len(lista)):
         if (lista[i][0]) == borrar:
             lista.pop(i)
+            encontrado = True
+            print("Eliminado correctamente")
             break
+        
+    if encontrado == False:
+        print(mensaje_error)
 
 def ordenar_lista(lista):
     for i in range (len(lista)):

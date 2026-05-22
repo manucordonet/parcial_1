@@ -16,6 +16,7 @@ def menu ():
     6) Ver el heroe mas alto
     7) Ver el heroe mas fuerte
     8) Ver el heroe mas delgado      
+    9) Salir   
         
     ------------------------------------
     """)
@@ -30,12 +31,9 @@ def menu ():
                 mostrar_lista(lista_heroes)
             case 3:
                 agregar_lista(lista_heroes)
-                print("El heroe fue agregado correctamente")
-                mostrar_lista(lista_heroes)
             case 4:
-                eliminar_lista(lista_heroes)
-                print("El heroe fue eliminado correctamente")
-                mostrar_lista(lista_heroes)
+                eliminar_lista(lista_heroes, "Ingrese el nombre del heroe a eliminar: ",
+                                "El heroe ingresado no esta registrado")
             case 5:
                 ordenar_lista(lista_heroes)
                 mostrar_lista(lista_heroes)
