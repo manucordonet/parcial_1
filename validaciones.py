@@ -15,8 +15,27 @@ def pedir_int(mensaje:str):
     while detectar_casteable(ingreso) == False:
         ingreso = input("ERROR, ingrese una opcion valida: ")
     return int(ingreso)
+
+def validar_str_lista(string:str, mensaje_error:str, opciones_validas:list):
+    valido = False
+    valor = string
+    while valido == False:
+        for i in range(len(opciones_validas)):
+            if valor == opciones_validas[i]:
+                valido = True                
+        if valido == False: 
+            valor = input(mensaje_error)
+
+    return valor
+
+def validar_str_exacto(string:str, comparacion:str, mensaje:str)->str:
+    valor = string
+    while string == comparacion:
+         valor = input(mensaje)
+    return valor
+          
     
-def validar_string_lista(lista:list, indice:int, string:str):
+def buscar_string_lista(lista:list, indice:int, string:str):
         encontrado = False
         for i in range(len(lista)):
             if (lista[i][indice]) == string:
