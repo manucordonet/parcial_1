@@ -1,16 +1,16 @@
-def validar_rango(dato:int, minimo:int, maximo:int):  
+def validar_rango(dato:int, minimo:int, maximo:int)->int:  
         validar = dato
         while validar < minimo or validar > maximo:
             validar = pedir_int(f"ERROR, ingrese un valor dentro del rango ({minimo} - {maximo}): ")
         return validar
 
-def validar_minimo(dato:int, minimo:int): 
+def validar_minimo(dato:int, minimo:int)->int: 
         validar = dato
         while validar <= minimo:
             validar = pedir_int(f"ERROR, el valor ingresado no puede ser menor a {minimo}): ")
         return validar
 
-def pedir_int(mensaje:str):
+def pedir_int(mensaje:str)->int:
     ingreso = input(mensaje)
     while detectar_casteable(ingreso) == False:
         ingreso = input("ERROR, ingrese una opcion valida: ")
@@ -34,14 +34,6 @@ def validar_str_exacto(string:str, comparacion:str, mensaje:str)->str:
         valor = input(mensaje)
     return valor
           
-    
-def buscar_string_lista(lista:list, indice:int, string:str):
-        encontrado = False
-        for i in range(len(lista)):
-            if (lista[i][indice]) == string:
-                encontrado = True
-                break
-        return encontrado
 
 def detectar_casteable(string:str)->bool:
     numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-"]

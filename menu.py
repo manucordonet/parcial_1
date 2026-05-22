@@ -33,7 +33,7 @@ def menu ():
                 agregar_lista(lista_heroes)
             case 4:
                 eliminar_lista(lista_heroes, "Ingrese el nombre del heroe a eliminar: ",
-                                "El heroe ingresado no esta registrado")
+                                "El heroe ingresado no esta registrado", 0)
             case 5:
                 ordenar_lista(lista_heroes)
                 mostrar_lista(lista_heroes)

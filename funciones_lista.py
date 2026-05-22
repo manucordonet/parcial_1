@@ -19,16 +19,15 @@ def agregar_lista(lista):
 
     lista.append([nombre, identidad, empresa, altura, peso, genero, color_ojos, color_pelo, fuerza, inteligencia])
 
-def eliminar_lista(lista, mensaje, mensaje_error):
+def eliminar_lista(lista, mensaje, mensaje_error, indice):
     encontrado = False
     borrar = input(mensaje)
     for i in range(len(lista)):
-        if (lista[i][0]) == borrar:
+        if (lista[i][indice]) == borrar:
             lista.pop(i)
             encontrado = True
             print("Eliminado correctamente")
             break
-        
     if encontrado == False:
         print(mensaje_error)
 
