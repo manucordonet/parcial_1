@@ -16,7 +16,7 @@ def pedir_int(mensaje:str):
         ingreso = input("ERROR, ingrese una opcion valida: ")
     return int(ingreso)
 
-def validar_str_lista(string:str, mensaje_error:str, opciones_validas:list):
+def validar_str_lista(string:str, opciones_validas:list):
     valido = False
     valor = string
     while valido == False:
@@ -24,14 +24,14 @@ def validar_str_lista(string:str, mensaje_error:str, opciones_validas:list):
             if valor == opciones_validas[i]:
                 valido = True                
         if valido == False: 
-            valor = input(mensaje_error)
+            valor = input("ERROR, Ingrese una opcion valida: ")
 
     return valor
 
 def validar_str_exacto(string:str, comparacion:str, mensaje:str)->str:
     valor = string
-    while string == comparacion:
-         valor = input(mensaje)
+    while valor == comparacion:
+        valor = input(mensaje)
     return valor
           
     

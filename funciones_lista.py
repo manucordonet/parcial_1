@@ -2,18 +2,20 @@ from validaciones import *
 from listas import *
 
 def agregar_lista(lista):
-    nombre = input("Ingrese el nombre del heroe: ")
-    identidad = input("Ingrese la identidad del heroe: ")
-    empresa = validar_str_lista(input("Ingrese la empresa del heroe"
-    " (“DC Comics” o “Marvel Comics”): "), empresas_validas)
+    nombre = validar_str_exacto(input("Ingrese el nombre: "), "",
+                                 "La opcion no puede estar vacia ")
+    identidad = validar_str_exacto(input("Ingrese la identidad del heroe: "),
+                                    "", "La opcion no puede estar vacia ")
+    empresa = validar_str_lista((input("Ingrese la empresa del heroe"
+    " (“DC Comics” o “Marvel Comics”): ")), empresas_validas)
     altura = validar_minimo(pedir_int("Ingrese la altura del heroe: "), 0)
     peso = validar_minimo(pedir_int("Ingrese el peso del heroe: "), 0)
-    genero = validar_str_lista(input("Ingrese el genero del heroe (M, F, NB): "), generos_validos)
-    color_ojos = validar_str_exacto(input("Ingrese el color de ojos del heroe: "), "")
-    color_pelo = validar_str_exacto(input("Ingrese el color de pelo del heroe: "), "")
+    genero = validar_str_lista((input("Ingrese el genero del heroe (M, F, NB): ")), generos_validos)
+    color_ojos = validar_str_exacto(input("Ingrese el color de ojos del heroe: "), "", "La opcion no puede estar vacia ")
+    color_pelo = validar_str_exacto(input("Ingrese el color de pelo del heroe: "), "", "La opcion no puede estar vacia ")
     fuerza = validar_minimo(pedir_int("Ingrese la fuerza: "), 0)
-    inteligencia = validar_str_lista(input("Ingrese la inteligencia del heroe "
-    "(“low”, “average”, “good”, “high”, “genius”): "), inteligencia_valida)
+    inteligencia = validar_str_lista((input("Ingrese la inteligencia del heroe "
+    "(“low”, “average”, “good”, “high”, “genius”): ")), inteligencia_valida)
 
     lista.append([nombre, identidad, empresa, altura, peso, genero, color_ojos, color_pelo, fuerza, inteligencia])
 
