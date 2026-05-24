@@ -69,16 +69,16 @@ def ver_minimo(lista:str, indice:int):
 
 def mostrar_heroe(lista):
         print(f"""              
--Nombre: {lista[0]}
--Identidad: {lista[1]}
--Empresa: {lista[2]}
--Altura: {lista[3]}
--Peso: {lista[4]}
--Genero: {lista[5]}
--Color de ojos: {lista[6]}
--Colo de pelo: {lista[7]}
--Fuerza: {lista[8]}
--Inteligencia: {lista[9]}
+        -Nombre: {lista[0]}
+        -Identidad: {lista[1]}
+        -Empresa: {lista[2]}
+        -Altura: {lista[3]}
+        -Peso: {lista[4]}
+        -Genero: {lista[5]}
+        -Color de ojos: {lista[6]}
+        -Colo de pelo: {lista[7]}
+        -Fuerza: {lista[8]}
+        -Inteligencia: {lista[9]}
 
 -----------------------------------------
         """)
