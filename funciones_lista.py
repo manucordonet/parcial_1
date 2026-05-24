@@ -33,7 +33,7 @@ def eliminar_lista(lista, mensaje, mensaje_error, indice):
 
 def ordenar_lista(lista):
     for i in range (len(lista)):
-        for i in range (len(lista)-1):
+        for j in range (len(lista)-1):
             if lista[i][0] > lista[i+1][0]:
                 aux = lista[i]
                 lista[i] = lista[i+1]
